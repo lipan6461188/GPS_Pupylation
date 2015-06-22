@@ -102,7 +102,7 @@ say "差值为： ",$pos_s/$#positive - $neg_s/$#negative;
 
 
 #统计预测情况
-open OUTPUT,">ROC" || die "Open FIle Failed\n";
+open OUTPUT,">$output" || die "Open FIle Failed\n";
 for(my $threshold=$dbound; $threshold <= $ubound; $threshold += $gap)
 {
     
